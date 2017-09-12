@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -20,12 +21,15 @@ public class CadastroActivity extends AppCompatActivity {
     RadioButton mrdBtnFem,mrdBtnMasc;
     Button mbtnConfirma;
     Spinner mspnmod;
+    RadioGroup gen;
+
+
 
     View.OnClickListener tratadorDeClique = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
 
-            String sedtnome,srdBtnMasc, srdBtnFem, sedtFone,sedtCpf,sedtData, sspnmod;
+            String sedtnome, sedtFone,sedtCpf,sedtData, sspnmod;
 
             String item = mspnmod.getSelectedItem().toString();
 
@@ -34,35 +38,15 @@ public class CadastroActivity extends AppCompatActivity {
             sedtCpf = medtCpf.getText().toString();
             sedtData =medtData.getText().toString();
             sspnmod = item;
-            srdBtnMasc = mrdBtnMasc.getText().toString();
-            srdBtnFem = mrdBtnFem.getText().toString();
 
             Intent it = new Intent(CadastroActivity.this, ConfirmacaoActivity.class);
-
-            String nulo = "nao";
-
-            if(mrdBtnMasc.isChecked()) {
-                Toast.makeText(getApplicationContext(),"Genero Masculino", Toast.LENGTH_SHORT).show();
-                it.putExtra("genMasc",srdBtnMasc);
-            }
-            else {
-                it.putExtra("genMasc",nulo);
-            }
-            if(mrdBtnFem.isActivated()) {
-                Toast.makeText(getApplicationContext(),"Genero Feminino", Toast.LENGTH_SHORT).show();
-                it.putExtra("genFem",srdBtnFem);
-            }
-            else {
-                it.putExtra("genFem",nulo);
-            }
 
             it.putExtra("nome",sedtnome);
             it.putExtra("fone",sedtFone);
             it.putExtra("cpf",sedtCpf);
             it.putExtra("data",sedtData);
             it.putExtra("mod",sspnmod);
-
-
+            it.putExtra("isMasculino",mrdBtnMasc.isChecked());
 
             startActivity(it);
 
@@ -80,6 +64,11 @@ public class CadastroActivity extends AppCompatActivity {
         medtFone = (EditText) findViewById(R.id.edtFone);
         medtCpf = (EditText) findViewById(R.id.edtCpf);
         medtData = (EditText) findViewById(R.id.edtData);
+
+         gen = (RadioGroup) findViewById(R.id.rgGen);
+
+
+
 
         mrdBtnFem = (RadioButton) findViewById(R.id.rdBtnFem);
         mrdBtnMasc = (RadioButton) findViewById(R.id.rdBtnMasc);
