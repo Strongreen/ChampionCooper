@@ -22,9 +22,7 @@ public class ConfirmacaoActivity extends AppCompatActivity {
     TextView mtxtnome,mtxtfone,mtxtcpf,mtxtgenero,mtxtnas,mtxtmod;
     Button mbtnEnviar,mbtnVoltar;
 
-    Intent it = new Intent(ConfirmacaoActivity.this, CadastroActivity.class);
-
-    private static ArrayList<Activity> activities=new ArrayList<Activity>();
+       private static ArrayList<Activity> activities=new ArrayList<Activity>();
 
     View.OnClickListener Editar = new View.OnClickListener() {
         @Override
