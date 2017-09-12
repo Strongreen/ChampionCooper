@@ -3,6 +3,7 @@ package br.com.strongreen.championcooper;
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Selection;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,9 @@ import java.util.ArrayList;
 
 public class ConfirmacaoActivity extends AppCompatActivity {
 
-    String nome,genFem,genMasc,mod, fone, cpf, data;
+    String nome,mod, fone, cpf, data;
+    Boolean isMasculino;
+
     TextView mtxtnome,mtxtfone,mtxtcpf,mtxtgenero,mtxtnas,mtxtmod;
     Button mbtnEnviar,mbtnVoltar;
 
@@ -70,8 +73,7 @@ public class ConfirmacaoActivity extends AppCompatActivity {
         nome = it.getStringExtra("nome");
         fone = it.getStringExtra("fone");
         cpf = it.getStringExtra("cpf");
-        genMasc = it.getStringExtra("genMasc");
-        genFem = it.getStringExtra("genFem");
+        isMasculino = it.getBooleanExtra("isMasculino", false);
         data = it.getStringExtra("data");
         mod = it.getStringExtra("mod");
 
@@ -79,16 +81,7 @@ public class ConfirmacaoActivity extends AppCompatActivity {
         mtxtnome.setText(nome);
         mtxtfone.setText(fone.toString());
         mtxtcpf.setText(cpf.toString());
-
-        if(genMasc.equals("nulo")) {
-            mtxtgenero.setText(genFem .toString());
-        }
-        else{
-            if(genFem.equals("nulo")) {
-                mtxtgenero.setText(genMasc.toString());
-            }
-        }
-
+        mtxtgenero.setText(isMasculino ? "Masculino" : "Feminino");
         mtxtnas.setText(data.toString());
         mtxtmod.setText(mod.toString());
 
