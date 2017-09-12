@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categorias">
+        <item>--Selecione--</item>
+        <item>Corrida 5km</item>
+        <item>Corrida 15km</item>
+        <item>Corrida 10km</item>
+        <item>Corrida 20km</item>
+        <item>Moutain Bike 10km</item>
+        <item>Moutain Bike 20km</item>
+        <item>Moutain Bike 30km</item>
+        <item>Moutain Bike 40km</item>
+        <item>Moutain Bike 80km</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="br.com.strongreen.championcooper.ConfirmacaoActivity">
+
+    <TextView
+        android:id="@+id/txtMNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome Completo"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtnome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtMtele"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Telefone"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtfone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtMcpf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CPF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtcpf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtMGen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Genero"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtgenero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtMdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data de Nascimento"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtnas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtMMod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modalidade"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtmod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Enviar" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Voltar" />
+    </LinearLayout>

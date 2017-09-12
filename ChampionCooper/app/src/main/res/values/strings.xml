@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ChampionCooper</string>
+    <string name="Modalidade">Modalidade</string>
+    <string name="DataNascimento">Data de Nascimento</string>
+    <string name="Feminino">Feminino</string>
+    <string name="Masculino">Masculino</string>
+    <string name="Genero">Genero</string>
+    <string name="CPF">Cpf</string>
+    <string name="Telefone">Telefone</string>
+    <string name="Nome">Nome</string>
+    <string name="NomeCompleto">Nome Completo</string>
+    <string name="Voltar">Voltar/Editar Informações</string>
+    <string name="Enviar">Enviar</string>
+    <string name="ConfirmarCadastro">Confirmar Cadastro</string>
+
+
+
+</resources>

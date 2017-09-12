@@ -1,0 +1,2 @@
+Bad activity command, or no activities match: br.com.strongreen.championcooper
+Use -h for help.
