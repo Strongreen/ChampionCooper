@@ -1,9 +1,8 @@
 package br.com.strongreen.championcooper;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Selection;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -32,37 +31,17 @@ public class CadastroActivity extends AppCompatActivity {
             sedtnome = medtnome.getText().toString();
             sedtFone = medtFone.getText().toString();
             sedtCpf = medtCpf.getText().toString();
-            sedtData =medtData.getText().toString();
+            sedtData = medtData.getText().toString();
             sspnmod = item;
-            srdBtnMasc = mrdBtnMasc.getText().toString();
-            srdBtnFem = mrdBtnFem.getText().toString();
 
             Intent it = new Intent(CadastroActivity.this, ConfirmacaoActivity.class);
-
-            String nulo = "nao";
-
-            if(mrdBtnMasc.isChecked()) {
-                Toast.makeText(getApplicationContext(),"Genero Masculino", Toast.LENGTH_SHORT).show();
-                it.putExtra("genMasc",srdBtnMasc);
-            }
-            else {
-                it.putExtra("genMasc",nulo);
-            }
-            if(mrdBtnFem.isActivated()) {
-                Toast.makeText(getApplicationContext(),"Genero Feminino", Toast.LENGTH_SHORT).show();
-                it.putExtra("genFem",srdBtnFem);
-            }
-            else {
-                it.putExtra("genFem",nulo);
-            }
 
             it.putExtra("nome",sedtnome);
             it.putExtra("fone",sedtFone);
             it.putExtra("cpf",sedtCpf);
             it.putExtra("data",sedtData);
             it.putExtra("mod",sspnmod);
-
-
+            it.putExtra("isMasculino",mrdBtnMasc.isChecked());
 
             startActivity(it);
 
